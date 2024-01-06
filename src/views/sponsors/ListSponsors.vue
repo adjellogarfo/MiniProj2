@@ -39,23 +39,39 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="user of users" :key="user._id">                
-                <td class="pt-4">{{user.name}}</td>
-                <td class="pt-4">{{user.type==="admin"?"Administrador":"Utilizador normal"}}</td>
-                <td class="pt-4">{{formatDate(user.registration_date)}}</td>
+              <tr>                
+                  <td class="pt-4">Adjello Lobo Garfo</td>
+                  <td class="pt-4">Cavalo</td>
+                  <td class="pt-4">2024-01-04 16:03:17</td>
                 <td>
-                  <router-link
-                    :to="{name:'editUser', params:{userId: user._id}}"
-                    tag="button"
-                    class="btn btn-outline-success mr-2"
-                  ><i class="fas fa-edit"></i> EDITAR</router-link>
+                  <button type="button"
+                          class="btn btn-outline-success mr-2">
+                      <i class="fas fa-edit"></i> EDITAR
+                  </button>
                   <button
-                    @click="viewUser(user._id)"
                     type="button"
                     class="btn btn-outline-success mr-2"
                   ><i class="fas fa-search"></i> VER</button>
                   <button
-                    @click="removeUser(user._id)"
+                    type="button"
+                    class="btn btn-outline-danger mr-2 "
+                  ><i class="fas fa-trash-alt"></i> REMOVER</button>
+                </td>
+              </tr>
+              <tr>                
+                  <td class="pt-4">Mbombo Fraqueza</td>
+                  <td class="pt-4">Gato</td>
+                  <td class="pt-4">2024-01-04 18:10:22</td>
+                <td>
+                  <button type="button"
+                          class="btn btn-outline-success mr-2">
+                      <i class="fas fa-edit"></i> EDITAR
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-success mr-2"
+                  ><i class="fas fa-search"></i> VER</button>
+                  <button
                     type="button"
                     class="btn btn-outline-danger mr-2 "
                   ><i class="fas fa-trash-alt"></i> REMOVER</button>
